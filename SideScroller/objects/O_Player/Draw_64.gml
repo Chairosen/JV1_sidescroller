@@ -1,0 +1,1 @@
+draw_healthbar(32,32,480,96,energy,c_gray,#949924,#f3ff00,0,1,1);
