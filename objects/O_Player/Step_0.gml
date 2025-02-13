@@ -45,7 +45,6 @@ if (inversedPower)
 	}
 }
 
-
 //Controls
 if (controlable)
 {
@@ -78,6 +77,7 @@ if (dashPower)
 	if (energy == 100)
 	{
 		hspeed += dashSpeed;
+		instance_create_layer(x,y,"Player",O_Dash);
 		energy -= energy;
 		alarm_set(0,2);
 	}
@@ -90,7 +90,13 @@ if (partCollision)
 	if (!Hit)
 {
 	Hit = true;
-	x -= 32;
+	Lives -= 1;
+	if (Lives <= 0)
+	{
+		x = xRea;
+		y = yRea;
+	}
+	sprite_index = S_PlayerHurt;
 	alarm_set(1,60);
 }
 }
@@ -120,16 +126,7 @@ if (!DDown)
 	}
 }
 
-//Life Manager
-switch (Lives)
-{
-	case 0: draw_sprite(S_Life,3,O_Player.x,O_Player.y);
-	case 1: draw_sprite(S_Life,2,O_Player.x,O_Player.y);
-	case 2: draw_sprite(S_Life,1,O_Player.x,O_Player.y);
-	case 3: draw_sprite(S_Life,0,O_Player.x,O_Player.y);
-	
-	break;
-}
+
 
 //Pause
 /*
