@@ -117,10 +117,10 @@ if (partCollision)
 	{
 		x = xRea;
 		y = yRea;
-		O_Player.GravityForce = abs(O_Player.GravityForce);
-		O_Player.image_yscale = abs(O_Player.image_yscale);
-		O_Player.gravityInversed = false;
-		room_goto(Death)
+		GravityForce = abs(O_Player.GravityForce);
+		image_yscale = abs(O_Player.image_yscale);
+		gravityInversed = false;
+		Lives = 3;
 	}
 	sprite_index = S_PlayerHurt;
 	alarm_set(1,60);

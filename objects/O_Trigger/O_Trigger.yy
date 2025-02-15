@@ -35,5 +35,5 @@
     "path":"sprites/S_BeakablePlat/S_BeakablePlat.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

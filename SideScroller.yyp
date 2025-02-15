@@ -108,8 +108,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Death","path":"rooms/Death/Death.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Death","path":"rooms/Death/Death.yy",},},
     {"roomId":{"name":"End","path":"rooms/End/End.yy",},},
   ],
   "templateType":"game",
