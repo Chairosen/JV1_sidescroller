@@ -7,5 +7,7 @@ if (topCollider && compteur < 9)
 
 if (compteur == 9)
 {
-	instance_destroy(O_KAYOU);
+	//instance_destroy(O_KAYOU);
+	O_KAYOU.vspeed =-2;
+	compteur = 10;
 }

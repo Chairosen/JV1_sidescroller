@@ -15,6 +15,12 @@ if (other.tag == "Intro"){
 	instance_destroy(other);
 	alarm[3] = 240;
 }
+if (other.tag == "tuto dgt")
+{
+	text = "Attention, ces plantes sont belles mais elles sont dangereuses. Elles projettent des particules hautement vénéneuses. Si vous vous faites toucher plus de deux fois...";
+	instance_create_layer(288,1230,"Player",O_Tuto);
+	instance_destroy(other);
+}
 if (other.tag == "End")
 {
 	instance_create_layer(x,y,"Player",O_Cinematic);

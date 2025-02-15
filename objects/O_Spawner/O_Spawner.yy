@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite5",
-    "path":"sprites/Sprite5/Sprite5.yy",
+    "name":"S_Collider",
+    "path":"sprites/S_Collider/S_Collider.yy",
   },
   "spriteMaskId":null,
   "visible":false,

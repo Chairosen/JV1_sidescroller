@@ -9,6 +9,7 @@ var QDown = keyboard_check(ord("Q"));
 var DDown = keyboard_check(ord("D"));
 var mouseLeft = mouse_check_button_pressed(mb_left);
 var escape = keyboard_check_pressed(vk_escape);
+var RPressed = keyboard_check_pressed(ord("R"));
 
 hspeed = walkspeed;
 
@@ -52,7 +53,18 @@ if (controlable)
 	{
 		if (DDown)
 		{
-			sprite_index = S_PlayerWalk;
+			switch (Lives){
+				case 1 : 
+					sprite_index = S_PlayerWalk_2;
+					break;
+				case 2 :
+					sprite_index = S_PlayerWalk_1;
+					break;
+				case 3 :
+					sprite_index = S_PlayerWalk;
+					break;
+			}
+			
 			image_xscale = 1;
 			walkspeed = 2;
 		}	
@@ -61,7 +73,17 @@ if (controlable)
 	{
 		if (QDown)
 		{
-			sprite_index = S_PlayerWalk;
+			switch (Lives){
+				case 1 : 
+					sprite_index = S_PlayerWalk_2;
+					break;
+				case 2 :
+					sprite_index = S_PlayerWalk_1;
+					break;
+				case 3 :
+					sprite_index = S_PlayerWalk;
+					break;
+			}
 			image_xscale = -1;
 			walkspeed = -2;
 	
@@ -95,6 +117,10 @@ if (partCollision)
 	{
 		x = xRea;
 		y = yRea;
+		O_Player.GravityForce = abs(O_Player.GravityForce);
+		O_Player.image_yscale = abs(O_Player.image_yscale);
+		O_Player.gravityInversed = false;
+		room_goto(Death)
 	}
 	sprite_index = S_PlayerHurt;
 	alarm_set(1,60);
@@ -121,12 +147,30 @@ if (!DDown)
 	if (!QDown)
 	{
 		walkspeed = 0;
-		sprite_index = S_PlayerIdle;
+		switch (Lives){
+				case 1 : 
+					sprite_index = S_PlayerIdle_2;
+					break;
+				case 2 :
+					sprite_index = S_PlayerIdle_1;
+					break;
+				case 3 :
+					sprite_index = S_PlayerIdle;
+					break;
+			}
 		image_speed = 1;
 	}
 }
 
-
+//Respawn
+if (RPressed)
+{
+	x = xRea;
+	y = yRea;
+	O_Player.GravityForce = abs(O_Player.GravityForce);
+	O_Player.image_yscale = abs(O_Player.image_yscale);
+	O_Player.gravityInversed = false;
+}
 
 //Pause
 /*

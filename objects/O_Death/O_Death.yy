@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite14",
-    "path":"sprites/Sprite14/Sprite14.yy",
+    "name":"S_Pike",
+    "path":"sprites/S_Pike/S_Pike.yy",
   },
   "spriteMaskId":null,
   "visible":true,

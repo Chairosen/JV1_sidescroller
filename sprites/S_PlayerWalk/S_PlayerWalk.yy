@@ -22,14 +22,15 @@
   "height":64,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"6aca244d-6b2b-4010-9e52-85e5a17f90d9","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"6aca244d-6b2b-4010-9e52-85e5a17f90d9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"174f793d-6784-4042-bdf2-c3d062b44d6b","blendMode":0,"displayName":"default","isLocked":false,"name":"174f793d-6784-4042-bdf2-c3d062b44d6b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"S_PlayerWalk",
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Player Sprite",
+    "path":"folders/Sprites/Player Sprite.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
